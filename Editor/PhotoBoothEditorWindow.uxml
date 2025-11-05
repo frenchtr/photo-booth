@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:appui="Unity.AppUI.UI" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True" schemaLocation="Unity.AppUI.UI file:/C:/Users/travi/Projects/Unity/f25_development_heaven-TRAVIS-LAPTOP/RAPID-DESCENT/RAPID-DESCENT/UIElementsSchema/Unity.AppUI.UI.xsd">
+    <Style src="project://database/Assets/photo-booth/Editor/PhotoBoothEditorWindow.uss?fileID=7433441132597879392&amp;guid=7d04b36c435777b4da39df961115a71a&amp;type=3#PhotoBoothEditorWindow" />
+    <appui:Panel data-source-type="Game.Editor.PhotoBooth.PhotoBoothEditorWindowViewModel, TravisRFrench.PhotoBooth.Editor" name="Panel" style="flex-grow: 1;">
+        <ui:VisualElement name="gridview-container" style="flex-grow: 1;">
+            <appui:GridView name="grid-view" selection-type="Multiple" item-height="200" class="dnd-gridview" style="flex-grow: 1;" />
+            <appui:DropZone name="drop-zone" class="dnd-dropzone" style="flex-grow: 1;">
+                <appui:Text text="Drop GameObjects or Prefabs here" size="S" class="dnd-dropzone-text" />
+            </appui:DropZone>
+        </ui:VisualElement>
+        <ui:VisualElement name="container" class="container" style="flex-grow: 0;">
+            <uie:ObjectField label="Capture Settings" allow-scene-objects="false" type="Game.Editor.PhotoBooth.CaptureSettings, TravisRFrench.PhotoBooth.Editor" value="project://database/Assets/photo-booth/Editor/DefaultCaptureSettings.asset?fileID=11400000&amp;guid=a42beffdb0e172b4a8cca87ed0e0b472&amp;type=2#DefaultCaptureSettings">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="CaptureSettings" binding-mode="TwoWay" />
+                </Bindings>
+            </uie:ObjectField>
+            <appui:ActionButton label="Capture" icon="camera" name="capture-button" />
+        </ui:VisualElement>
+    </appui:Panel>
+</ui:UXML>
