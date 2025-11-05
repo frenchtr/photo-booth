@@ -1,11 +1,11 @@
 {
     "package": {
-        "name":"unity-package-template",
-        "displayName": "Unity Package Template",
-        "version": "0.0.0",
+        "name":"photo-booth",
+        "displayName": "Photo Booth",
+        "version": "0.1.0",
         "unityVersion": "",
-        "description": "A template for creating Unity packages.",
-        "url": "https://github.com/frenchtr/unity-package-template"
+        "description": "",
+        "url": "https://github.com/frenchtr/photo-booth"
     },
 
     "organization": {

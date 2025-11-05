@@ -1,8 +1,10 @@
 {
-    "name": "TravisRFrench.UnityPackageTemplate.Runtime",
-    "rootNamespace": "TravisRFrench.UnityPackageTemplate.Runtime",
+    "name": "TravisRFrench.PhotoBooth.Editor",
+    "rootNamespace": "TravisRFrench.PhotoBooth.Editor",
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
