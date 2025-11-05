@@ -1,4 +1,7 @@
 {
     "name": "com.travisrfrench.photo-booth",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "dependencies": {
+    "com.unity.dt.app-ui": "2.2.0"
+  }
 }
