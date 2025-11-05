@@ -35,8 +35,9 @@ namespace Game.Editor.PhotoBooth
 
         public event EventHandler<BindablePropertyChangedEventArgs> propertyChanged;
 
-        public PhotoBoothEditorWindowViewModel()
+        public PhotoBoothEditorWindowViewModel(CaptureSettings defaultCaptureSettings)
         {
+            this.CaptureSettings = defaultCaptureSettings;
             this.CaptureTargets = new List<GameObject>();
         }
 

@@ -8,7 +8,7 @@
             </appui:DropZone>
         </ui:VisualElement>
         <ui:VisualElement name="container" class="container" style="flex-grow: 0;">
-            <uie:ObjectField label="Capture Settings" allow-scene-objects="false" type="Game.Editor.PhotoBooth.CaptureSettings, TravisRFrench.PhotoBooth.Editor" value="project://database/Assets/photo-booth/Editor/DefaultCaptureSettings.asset?fileID=11400000&amp;guid=a42beffdb0e172b4a8cca87ed0e0b472&amp;type=2#DefaultCaptureSettings">
+            <uie:ObjectField label="Capture Settings" allow-scene-objects="false" type="Game.Editor.PhotoBooth.CaptureSettings, TravisRFrench.PhotoBooth.Editor">
                 <Bindings>
                     <ui:DataBinding property="value" data-source-path="CaptureSettings" binding-mode="TwoWay" />
                 </Bindings>

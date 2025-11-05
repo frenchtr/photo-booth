@@ -11,9 +11,10 @@ namespace Game.Editor.PhotoBooth
     {
         [SerializeField]
         private VisualTreeAsset visualTreeAsset;
-
         [SerializeField]
         private VisualTreeAsset gridViewItemTreeAsset;
+        [SerializeField]
+        private CaptureSettings defaultCaptureSettings;
         private PhotoBoothEditorWindowViewModel viewModel;
         private GridView gridView;
         private DropZone dropZone;
@@ -28,7 +29,7 @@ namespace Game.Editor.PhotoBooth
 
         public void CreateGUI()
         {
-            this.viewModel = new PhotoBoothEditorWindowViewModel();
+            this.viewModel = new PhotoBoothEditorWindowViewModel(this.defaultCaptureSettings);
             
             var root = this.rootVisualElement;
             var template = this.visualTreeAsset.Instantiate();
