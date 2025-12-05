@@ -1,5 +1,6 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:appui="Unity.AppUI.UI" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True" schemaLocation="Unity.AppUI.UI file:/C:/Users/travi/Projects/Unity/f25_development_heaven-TRAVIS-LAPTOP/RAPID-DESCENT/RAPID-DESCENT/UIElementsSchema/Unity.AppUI.UI.xsd">
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:appui="Unity.AppUI.UI" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <Style src="project://database/Assets/photo-booth/Editor/PhotoBoothEditorWindow.uss?fileID=7433441132597879392&amp;guid=7d04b36c435777b4da39df961115a71a&amp;type=3#PhotoBoothEditorWindow" />
+    <Style src="project:/Packages/com.unity.dt.app-ui/PackageResources/Styles/Themes/App UI.tss" />
     <appui:Panel data-source-type="Game.Editor.PhotoBooth.PhotoBoothEditorWindowViewModel, TravisRFrench.PhotoBooth.Editor" name="Panel" style="flex-grow: 1;">
         <ui:VisualElement name="gridview-container" style="flex-grow: 1;">
             <appui:GridView name="grid-view" selection-type="Multiple" item-height="200" class="dnd-gridview" style="flex-grow: 1;" />
