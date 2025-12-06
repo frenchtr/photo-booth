@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:appui="Unity.AppUI.UI" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/photo-booth/Editor/PhotoBoothEditorWindow.uss?fileID=7433441132597879392&amp;guid=7d04b36c435777b4da39df961115a71a&amp;type=3#PhotoBoothEditorWindow" />
-    <Style src="project:/Packages/com.unity.dt.app-ui/PackageResources/Styles/Themes/App UI.tss" />
+    <Style src="project://database/Assets/photo-booth/Editor/PhotoBoothEditorWindow.uss?fileID=7433441132597879392&amp;guid=7d04b36c435777b4da39df961115a71a&amp;type=3" />
+    <Style src="project://database/Packages/com.unity.dt.app-ui/PackageResources/Styles/Themes/App%20UI.tss?fileID=-4733365628477956816&amp;guid=3c3937ea58c441ab93fc1e0f7ec5fa46&amp;type=3#App UI" />
     <appui:Panel data-source-type="Game.Editor.PhotoBooth.PhotoBoothEditorWindowViewModel, TravisRFrench.PhotoBooth.Editor" name="Panel" style="flex-grow: 1;">
         <ui:VisualElement name="gridview-container" style="flex-grow: 1;">
             <appui:GridView name="grid-view" selection-type="Multiple" item-height="200" class="dnd-gridview" style="flex-grow: 1;" />
@@ -14,6 +14,8 @@
                     <ui:DataBinding property="value" data-source-path="CaptureSettings" binding-mode="TwoWay" />
                 </Bindings>
             </uie:ObjectField>
+            <appui:ActionButton label="Play" icon="camera" name="play-button" />
+            <appui:ActionButton label="Stage" icon="camera" name="stage-button" />
             <appui:ActionButton label="Capture" icon="camera" name="capture-button" />
         </ui:VisualElement>
     </appui:Panel>

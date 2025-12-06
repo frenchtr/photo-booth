@@ -18,8 +18,10 @@ namespace Game.Editor.PhotoBooth
         private PhotoBoothEditorWindowViewModel viewModel;
         private GridView gridView;
         private DropZone dropZone;
+        private ActionButton playButton;
+        private ActionButton stageButton;
         private ActionButton captureButton;
-        
+
         [UnityEditor.MenuItem("Tools/Photo Booth")]
         public static void ShowExample()
         {
@@ -38,6 +40,8 @@ namespace Game.Editor.PhotoBooth
             
             this.gridView = root.Q<GridView>("grid-view");
             this.dropZone = root.Q<DropZone>("drop-zone");
+            this.playButton = root.Q<ActionButton>("play-button");
+            this.stageButton = root.Q<ActionButton>("stage-button");
             this.captureButton = root.Q<ActionButton>("capture-button");
 
             this.gridView.itemsSource = this.viewModel.CaptureTargets;
@@ -77,6 +81,8 @@ namespace Game.Editor.PhotoBooth
             this.gridView.Refresh();
             
             this.dropZone.controller.acceptDrag = AcceptDrag;
+            this.playButton.clicked += this.OnPlayButtonClicked;
+            this.stageButton.clicked += this.OnStageButtonClicked;
             this.captureButton.clicked += this.OnCaptureButtonClicked;
             this.dropZone.controller.dropped += this.OnDropZoneDropped;
             this.dropZone.controller.dragEnded += () => this.UpdateView(false);
@@ -115,8 +121,20 @@ namespace Game.Editor.PhotoBooth
         private void OnDisable()
         {
             this.captureButton.clicked -= this.OnCaptureButtonClicked;
+            this.playButton.clicked -= this.OnPlayButtonClicked;
+            this.stageButton.clicked -= this.OnStageButtonClicked;
         }
 
+        private void OnPlayButtonClicked()
+        {
+            this.viewModel.Play();
+        }
+        
+        private void OnStageButtonClicked()
+        {
+            this.viewModel.Stage();
+        }
+        
         private void OnCaptureButtonClicked()
         {
             this.viewModel.Capture();

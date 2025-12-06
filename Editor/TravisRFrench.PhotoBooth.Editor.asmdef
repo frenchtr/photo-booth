@@ -3,7 +3,11 @@
     "rootNamespace": "TravisRFrench.PhotoBooth.Editor",
     "references": [
         "GUID:2f101f87087d58f4ba92ca00188e763d",
-        "GUID:30599ed272688438b8375570b417ba36"
+        "GUID:30599ed272688438b8375570b417ba36",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:4129704b5a1a13841ba16f230bf24a57",
+        "GUID:832a8ef6e615e9a41a5076e1c9a43782",
+        "GUID:847b179520b009e4c8d15c296b1cbf35"
     ],
     "includePlatforms": [
         "Editor"
